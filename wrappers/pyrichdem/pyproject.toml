@@ -7,7 +7,7 @@ name = "richdem"
 version = "2.1.2"
 description = "High-Performance Terrain Analysis"
 readme = "README.md"
-license = "GPLv3"
+license = "GPL-3.0-or-later"
 license-files = ["LICENSE.txt"]
 authors = [
     {name = "Richard Barnes", email = "rbarnes@umn.edu"}
