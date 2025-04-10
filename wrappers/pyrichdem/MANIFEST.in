@@ -1,1 +1,3 @@
+include richdem/*
 recursive-include lib *
+recursive-include richdem *
