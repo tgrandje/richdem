@@ -26,26 +26,10 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
 ]
 
-[tool.setuptools]
-packages = ["richdem"]
-entry-points.console_scripts = [
-    "rd_depression_filling = richdem.cli:DepressionFilling",
-    "rd_breach_depressions = richdem.cli:BreachDepressions",
-    "rd_flow_accumulation = richdem.cli:FlowAccumulation",
-    "rd_terrain_attribute = richdem.cli:TerrainAttribute",
-    "rd_info = richdem.cli:RdInfo",
-    "rd_compare = richdem.cli:RdCompare"
-]
-
-[tool.setuptools.extension]
-# Define the C++ extension module
-richdem = {module = "_richdem", sources = [
-    "src/pywrapper.cpp",
-    "lib/richdem/src/**/*.cpp",
-], include-dirs = ["lib/richdem/include"], macros = [
-    "DOCTEST_CONFIG_DISABLE",
-    "_USE_MATH_DEFINES",
-], language = "c++"}
-
-[tool.setuptools.dynamic]
-version = {attr = "richdem.__version__"}
+[project.scripts]
+rd_depression_filling = "richdem.cli:DepressionFilling"
+rd_breach_depressions = "richdem.cli:BreachDepressions"
+rd_flow_accumulation = "richdem.cli:FlowAccumulation"
+rd_terrain_attribute = "richdem.cli:TerrainAttribute"
+rd_info = "richdem.cli:RdInfo"
+rd_compare = "richdem.cli:RdCompare"
