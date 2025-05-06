@@ -14,7 +14,7 @@ authors = [
 ]
 urls = {homepage = "https://github.com/r-barnes/richdem"}
 keywords = ["GIS", "terrain", "hydrology", "geomorphology", "raster"]
-requires-python = ">= 3.10"
+requires-python = ">= 3.10,<4.10"
 
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -34,3 +34,8 @@ rd_flow_accumulation = "richdem.cli:FlowAccumulation"
 rd_terrain_attribute = "richdem.cli:TerrainAttribute"
 rd_info = "richdem.cli:RdInfo"
 rd_compare = "richdem.cli:RdCompare"
+
+[tool.poetry.group.dev.dependencies]
+wheel = "^0.45.1"
+build = "^1.2.2.post1"
+

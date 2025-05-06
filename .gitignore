@@ -11,3 +11,5 @@ build/
 .vscode/
 *.log
 *.so
+wrappers/pyrichdem/richdem-*/
+*.whl
